@@ -63,7 +63,7 @@ class MachineViewSet(viewsets.ModelViewSet):
     lookup_field = 'serial'
     filter_fields = (
         'id', 'console_user', 'cpu_speed', 'cpu_type', 'deployed', 'first_checkin', 'hd_percent',
-        'hd_space', 'hd_total', 'hostname', 'last_checkin', 'machine_model',
+        'hd_space', 'hd_total', 'hostname', 'last_checkin', 'machine_model', 'machine_model_id',
         'machine_model_friendly', 'manifest', 'memory', 'memory_kb', 'munki_version',
         'operating_system', 'os_family', 'sal_version')
     search_fields = (

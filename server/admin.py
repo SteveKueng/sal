@@ -136,7 +136,7 @@ class MachineAdmin(admin.ModelAdmin):
     fields = (
         (business_unit, 'machine_group'),
         ('hostname', 'serial', 'console_user'),
-        ('machine_model', 'machine_model_friendly'),
+        ('machine_model', 'machine_model_friendly', 'machine_model_id'),
         ('cpu_type', 'cpu_speed'), ('memory', 'memory_kb'), ('hd_space', 'hd_total', 'hd_percent'),
         ('operating_system', 'os_family'),
         ('munki_version', 'manifest'),

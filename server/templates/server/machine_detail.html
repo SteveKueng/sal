@@ -40,7 +40,9 @@ $( document ).ready(function() {
 <div class="row">
   <div class="col-md-5">
     <p style="text-align: center;">
-      {% if machine.os_family == 'Darwin' %}
+      {% if machine.os_family == 'Darwin' and machine.machine_model_id %}
+      <img src='https://km.support.apple.com/kb/securedImage.jsp?productid={{machine.machine_model_id }}&size=120x120' height="120" width="120" alt="macOS" />
+      {% elif machine.os_family == 'Darwin' %}
       <img src='https://km.support.apple.com/kb/securedImage.jsp?configcode={{machine.serial|slice:"8:" }}&size=120x120' height="120" width="120" alt="macOS" />
       {% elif machine.os_family == 'ChromeOS' %}
       <img src="{% static 'img/Chrome.png' %}" height="120" width="120" alt="Chrome OS"/>
